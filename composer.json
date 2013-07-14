@@ -1,0 +1,25 @@
+{
+  "name": "cvcnetwork/beanstalkconsole",
+  "description": "",
+  "authors": [
+    {
+      "name": "Tim Lindsay",
+      "email": "timlindsay@cvc.tv"
+    }
+  ],
+  "require": {
+     "php": ">=5.3.0"
+    ,"illuminate/support": "4.0.x"
+    ,"pda/pheanstalk": "dev-master"
+    ,"mockery/mockery": "dev-master"
+  },
+  "autoload": {
+    "classmap": [
+      "src/migrations"
+    ],
+    "psr-0": {
+      "CVCNetwork\\BeanstalkConsole": "src/"
+    }
+  },
+  "minimum-stability": "dev"
+}
