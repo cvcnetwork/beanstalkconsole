@@ -24,3 +24,9 @@ Note: This is NOT secure.
   );
 
 ```
+
+### publish your assets
+This package has assets that need to be published to the public folder to achieve this use artisan, and commit the files to your main project
+```php
+php artisan asset:publish cvcnetwork/beanstalkconsole
+```
