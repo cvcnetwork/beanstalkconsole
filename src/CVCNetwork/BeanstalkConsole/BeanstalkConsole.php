@@ -28,7 +28,7 @@ class BeanstalkConsole {
     $server = !empty($_GET['server']) ? $_GET['server'] : \Config::get('beanstalkconsole.host','127.0.0.1') . ':' . \Config::get('beanstalkconsole.port', 11300);
     $action = !empty($_GET['action']) ? $_GET['action'] : '';
     $count = !empty($_GET['count']) ? $_GET['count'] : '';
-    $tube = !empty($_GET['tube']) ? $_GET['tube'] : 'default';
+    $tube = !empty($_GET['tube']) ? $_GET['tube'] : '';
 
     $this->_globalVar = array(
       'server' => $server,
