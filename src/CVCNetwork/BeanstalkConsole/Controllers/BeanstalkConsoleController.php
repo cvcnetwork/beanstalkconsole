@@ -19,7 +19,10 @@ class BeanstalkConsoleController extends \BaseController {
 
 	public function showConsole()
 	{
-
+    $user = \Auth::getUser();
+    if($user->id ==0){
+      return;
+    }
 
     $console = new \CVCNetwork\BeanstalkConsole\BeanstalkConsole();
     $errors = $console->getErrors();
