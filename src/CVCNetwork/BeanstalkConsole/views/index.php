@@ -1,6 +1,6 @@
 <?php
 
-$assets = "/packages/cvcnetwork/beanstalkconsole";
+$assets = '/' . $path . "/packages/cvcnetwork/beanstalkconsole";
 $url = URL::current();
 
 ?><!DOCTYPE html>
