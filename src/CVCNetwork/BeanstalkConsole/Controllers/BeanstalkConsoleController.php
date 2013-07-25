@@ -4,23 +4,21 @@ use Pheanstalk_Pheanstalk as Pheanstalk;
 
 class BeanstalkConsoleController extends \BaseController {
 
-	/*
-	|--------------------------------------------------------------------------
-	| Default Home Controller
-	|--------------------------------------------------------------------------
-	|
-	| You may wish to use controllers instead of, or in addition to, Closure
-	| based routes. That's great! Here is an example controller method to
-	| get you started. To route to this controller, just add the route:
-	|
-	|	Route::get('/', 'HomeController@showWelcome');
-	|
-	*/
+  /*
+  |--------------------------------------------------------------------------
+  | Default Home Controller
+  |--------------------------------------------------------------------------
+  |
+  | You may wish to use controllers instead of, or in addition to, Closure
+  | based routes. That's great! Here is an example controller method to
+  | get you started. To route to this controller, just add the route:
+  |
+  |	Route::get('/', 'HomeController@showWelcome');
+  |
+  */
 
-	public function showConsole()
-	{
-    $user = \Auth::getUser();
-    if($user->id ==0){
+  public function showConsole() {
+    if (!\Auth::check()) {
       return;
     }
 
@@ -29,7 +27,12 @@ class BeanstalkConsoleController extends \BaseController {
     $tplVars = $console->getTplVars();
     extract($tplVars);
 
-    if(empty($peek)){
+    if (!isset($tubes)) {
+      $tubes = array();
+      $tubesStats = array();
+    }
+
+    if (empty($peek)) {
       $peek = array();
     }
 
@@ -48,8 +51,9 @@ class BeanstalkConsoleController extends \BaseController {
         'errors' => $errors,
         'peek' => $peek,
         'path' => $path,
+        'assetsPath' => \Config::get('beanstalkconsole.assetsPath', '/'), //Assume the package is published under public
       ));
 
-	}
+  }
 
 }
