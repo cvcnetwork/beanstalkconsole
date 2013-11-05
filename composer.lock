@@ -3,7 +3,7 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "eda390dcb69458a6f3fe019dc115c36c",
+    "hash": "dd3ab43130979df56ba7dd5c43e2a34b",
     "packages": [
         {
             "name": "illuminate/support",
@@ -12,12 +12,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
-                "reference": "6a690ae6dff5da787f3b265350f23c4e8e4828ed"
+                "reference": "cd95b25e9c620d78ecb3c6285e3f883b39a480af"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/illuminate/support/zipball/6a690ae6dff5da787f3b265350f23c4e8e4828ed",
-                "reference": "6a690ae6dff5da787f3b265350f23c4e8e4828ed",
+                "url": "https://api.github.com/repos/illuminate/support/zipball/cd95b25e9c620d78ecb3c6285e3f883b39a480af",
+                "reference": "cd95b25e9c620d78ecb3c6285e3f883b39a480af",
                 "shasum": ""
             },
             "require": {
@@ -49,23 +49,25 @@
             "authors": [
                 {
                     "name": "Taylor Otwell",
-                    "email": "taylorotwell@gmail.com"
+                    "email": "taylorotwell@gmail.com",
+                    "homepage": "https://github.com/taylorotwell",
+                    "role": "Developer"
                 }
             ],
-            "time": "2013-07-09 02:19:57"
+            "time": "2013-10-31 11:58:08"
         },
         {
             "name": "pda/pheanstalk",
-            "version": "dev-master",
+            "version": "v2.1.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/pda/pheanstalk.git",
-                "reference": "5028537601caba22a85d20a3168443920538baac"
+                "reference": "ab006cf9330fb5d3799f30a5d9841b85edb40a0f"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/pda/pheanstalk/zipball/5028537601caba22a85d20a3168443920538baac",
-                "reference": "5028537601caba22a85d20a3168443920538baac",
+                "url": "https://api.github.com/repos/pda/pheanstalk/zipball/ab006cf9330fb5d3799f30a5d9841b85edb40a0f",
+                "reference": "ab006cf9330fb5d3799f30a5d9841b85edb40a0f",
                 "shasum": ""
             },
             "require": {
@@ -94,7 +96,7 @@
             "keywords": [
                 "beanstalkd"
             ],
-            "time": "2013-04-03 09:09:52"
+            "time": "2013-04-03 09:15:34"
         }
     ],
     "packages-dev": [
@@ -104,9 +106,9 @@
 
     ],
     "minimum-stability": "dev",
-    "stability-flags": {
-        "pda/pheanstalk": 20
-    },
+    "stability-flags": [
+
+    ],
     "platform": {
         "php": ">=5.3.0"
     },
